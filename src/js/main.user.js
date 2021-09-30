@@ -1412,9 +1412,6 @@ const MASTER_OF_FORUMS = () => {
       DRAWER_GUIDE.style.position = 'fixed';
       DRAWER_GUIDE.style.top = `${Math.floor(Math.random() * 100)}%`;
       MAIN.NODE.append(DRAWER_GUIDE);
-      setTimeout(() => {
-        DRAWER_GUIDE.style.display = 'none';
-      }, 2 * 1000);
     }
   };
 

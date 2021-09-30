@@ -604,14 +604,14 @@ img.master-badge:hover,
 
 /* Drawer Guide */
 @keyframes drawer-guide-move {
-  from { left: 1rem; }
+  from { left: 2rem; }
   to { left: 0; }
 }
 
 .master-of-forums .drawer-guide {
   position: fixed;
-  left: 0;
+  left: -2rem;
   z-index: 99;
-  -webkit-animation: drawer-guide-move 0.2s infinite;
-  animation: drawer-guide-move 0.2s infinite;
+  -webkit-animation: drawer-guide-move 0.5s 4;
+  animation: drawer-guide-move 0.5s 4;
 }
