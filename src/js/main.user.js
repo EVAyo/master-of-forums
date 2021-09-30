@@ -1846,7 +1846,7 @@ const MASTER_OF_FORUMS = () => {
     });
 
     // Form
-    MONKEY_MENU.name = '\u{1F993} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F344} \u{63D0}\u{4EA4}\u{8BBA}\u{575B}\u{8FDD}\u{7981}\u{8BCD}\u{7ED9}\u{8BBA}\u{575B}\u{5927}\u{5E08}';
+    MONKEY_MENU.name = '\u{1F993} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F344} \u{62A5}\u{544A}\u{8BBA}\u{575B}\u{8FDD}\u{7981}\u{8BCD}\u{7ED9}\u{8BBA}\u{575B}\u{5927}\u{5E08}';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
       GM_openInTab('https://www.mikecrm.com/4EblkxT', {
         active: true,
