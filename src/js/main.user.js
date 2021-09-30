@@ -1410,15 +1410,7 @@ const MASTER_OF_FORUMS = () => {
       GUIDE.innerHTML = '\u{1F448}';
       GUIDE.style.position = 'fixed';
       GUIDE.style.top = `${Math.floor(Math.random() * 100)}%`;
-      GUIDE.style.left = '1rem';
-      GUIDE.style.transition = 'left 0.2s';
-      GUIDE.style.zIndex = 100;
       MAIN.NODE.append(GUIDE);
-      for (let i = 0; i < 10; i++) {
-        setTimeout(() => {
-          GUIDE.style.left = `${i % 2}rem`;
-        }, i * 200);
-      }
       setTimeout(() => {
         GUIDE.style.display = 'none';
       }, 2 * 1000);
