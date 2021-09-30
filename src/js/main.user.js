@@ -952,8 +952,9 @@ const MASTER_OF_FORUMS = () => {
 
   MAIN.fn.fileUploadAppendToTextarea = (url) => {
     for (const i of document.getElementsByTagName('textarea')) {
-      if (i.value) {
-        i.value += `\n[img]${url}[/img]`;
+      const content = i.value.trim();
+      if (content) {
+        i.value = `${content}\n[img]${url}[/img]`;
       }
     }
     if (MAIN.data?.hostname === 'ωωω_v2ex_com') {
