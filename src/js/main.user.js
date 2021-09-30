@@ -1804,7 +1804,9 @@ const MASTER_OF_FORUMS = () => {
     .sign a[href*="action=logout"] {
       display: none;
     }
+    .sign .t_table a div::after,
     .sign .t_table a font::after,
+    .sign a .t_table div::after,
     .sign a .t_table font::after {
       content: "\\E0020";
     }
