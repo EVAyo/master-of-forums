@@ -1404,15 +1404,16 @@ const MASTER_OF_FORUMS = () => {
     //   }
     // }, false);
 
-    // Guide
+    // Drawer Guide
     if (REFERRER.includes('/forum-') || REFERRER === '') {
-      const GUIDE = document.createElement('span');
-      GUIDE.innerHTML = '\u{1F448}';
-      GUIDE.style.position = 'fixed';
-      GUIDE.style.top = `${Math.floor(Math.random() * 100)}%`;
-      MAIN.NODE.append(GUIDE);
+      const DRAWER_GUIDE = document.createElement('span');
+      DRAWER_GUIDE.className = 'drawer-guide';
+      DRAWER_GUIDE.innerHTML = '\u{1F448}';
+      DRAWER_GUIDE.style.position = 'fixed';
+      DRAWER_GUIDE.style.top = `${Math.floor(Math.random() * 100)}%`;
+      MAIN.NODE.append(DRAWER_GUIDE);
       setTimeout(() => {
-        GUIDE.style.display = 'none';
+        DRAWER_GUIDE.style.display = 'none';
       }, 2 * 1000);
     }
   };
