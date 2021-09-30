@@ -99,6 +99,14 @@ html {
 .r-ads,
 .right-ads,
 .sidebar_units,
+.sign .t_table a [align="center"] [color="#EFAA00"],
+.sign .t_table a [align="Center"] [color="#EFAA00"],
+.sign .t_table a [color="#EFAA00"] [align="center"],
+.sign .t_table a [color="#EFAA00"] [align="Center"],
+.sign a .t_table [align="center"] [color="#EFAA00"],
+.sign a .t_table [align="Center"] [color="#EFAA00"],
+.sign a .t_table [color="#EFAA00"] [align="center"],
+.sign a .t_table [color="#EFAA00"] [align="Center"],
 .wp .dnch_eo_pb,
 .wp .dnch_eo_pt,
 .wp.a_h,
@@ -118,6 +126,15 @@ iframe {
 /* Remove post background image */
 #postlist table {
   background-image: unset;
+}
+
+.sign .t_table a [align="center"]::after,
+.sign .t_table a [align="Center"]::after,
+.sign .t_table a [color="#EFAA00"]::after,
+.sign a .t_table [align="center"]::after,
+.sign a .t_table [align="Center"]::after,
+.sign a .t_table [color="#EFAA00"]::after {
+  content: "\E0020";
 }
 
 /* Avatar */
