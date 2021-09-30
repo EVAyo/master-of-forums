@@ -1796,9 +1796,12 @@ const MASTER_OF_FORUMS = () => {
     GM_addStyle(`
     .wp.a_t,
     .wp.a_h,
+    .sign .t_table a [align] font,
     .sign .t_table a font [align],
+    .sign a .t_table [align] font,
     .sign a .t_table font [align],
-    .sign a[href$="action=logout"] {
+    .sign .t_table div font[color="#EFAA00"]
+    .sign a[href*="action=logout"] {
       display: none;
     }
     .sign .t_table a font::after,
