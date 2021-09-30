@@ -148,6 +148,7 @@
 // @connect           qq.com
 // @connect           random.org
 // @connect           raw.githubusercontent.com
+// @connect           shields.io
 // @connect           signal.org
 // @connect           slack.com
 // @connect           soundcloud.com
