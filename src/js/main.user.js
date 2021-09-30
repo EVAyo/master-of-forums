@@ -1792,26 +1792,6 @@ const MASTER_OF_FORUMS = () => {
   };
 
   MAIN.fn.ωωω_hostloc_com = () => {
-    // Remove ads
-    GM_addStyle(`
-    .wp.a_t,
-    .wp.a_h,
-    .sign .t_table a [align] font,
-    .sign .t_table a font [align],
-    .sign a .t_table [align] font,
-    .sign a .t_table font [align],
-    .sign .t_table div font[color="#EFAA00"]
-    .sign a[href*="action=logout"] {
-      display: none;
-    }
-    .sign .t_table a div::after,
-    .sign .t_table a font::after,
-    .sign a .t_table div::after,
-    .sign a .t_table font::after {
-      content: "\\E0020";
-    }
-    `);
-
     if (PATHNAME.includes('/thread-') || HREF.includes('/forum.php?mod=viewthread&tid=')) {
       MAIN.fn?.drawer();
     } else if (PATHNAME.includes('/space-uid-') || PATHNAME.includes('/space-username-') || HREF.includes('/home.php?mod=space')) {
