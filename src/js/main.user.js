@@ -1795,7 +1795,7 @@ const MASTER_OF_FORUMS = () => {
     }
 
     // Check-in
-    MONKEY_MENU.name = '\u{1F31E} \u{7528}\u{6237}\u{7B7E}\u{5230}';
+    MONKEY_MENU.name = '\u{1F4BB} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F31E} \u{7528}\u{6237}\u{7B7E}\u{5230}';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
       if (typeof MAIN.can?.checkIn === 'undefined') {
         MAIN.can.checkIn = false;
@@ -1843,6 +1843,14 @@ const MASTER_OF_FORUMS = () => {
           });
         }, 15 * 1000);
       }
+    });
+
+    // Form
+    MONKEY_MENU.name = '\u{1F4BB} \u{4E3B}\u{673A}\u{8BBA}\u{575B} \u{1F4D1} \u{63D0}\u{4EA4}\u{8FDD}\u{7981}\u{8BCD}\u{7ED9}\u{8BBA}\u{575B}\u{5927}\u{5E08}';
+    GM_registerMenuCommand(MONKEY_MENU.name, () => {
+      GM_openInTab('https://www.mikecrm.com/4EblkxT', {
+        active: true,
+      });
     });
 
     // Switch to Domains
