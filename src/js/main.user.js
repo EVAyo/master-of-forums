@@ -244,6 +244,7 @@ const MASTER_OF_FORUMS = () => {
   const HOSTNAME = window.location.hostname;
   const HREF = window.location.href;
   const PATHNAME = window.location.pathname;
+  const REFERRER = document.referrer;
 
   // Monkey Menu
   const MONKEY_MENU = {};
@@ -1404,7 +1405,7 @@ const MASTER_OF_FORUMS = () => {
     // }, false);
 
     // Guide
-    if (document.referrer.includes('/forum-')) {
+    if (REFERRER.includes('/forum-') || REFERRER === '') {
       const GUIDE = document.createElement('span');
       GUIDE.innerHTML = '\u{1F448}';
       GUIDE.style.position = 'fixed';
