@@ -2,11 +2,11 @@ const CHANNEL = document.getElementById('v').dataset.channel;
 const HUMAN_READABLE_VERSION = document.getElementById('v').dataset.version;
 const MACHINE_READABLE_VERSION = parseInt(HUMAN_READABLE_VERSION.split('.').reduce((previous, current) => previous + current.padStart(3, '0')), 10);
 // eslint-disable-next-line no-console
-console.log('Channel is', CHANNEL);
+console.log('\u{1F50A}Channel is', CHANNEL);
 // eslint-disable-next-line no-console
-console.log('Human readable version is', HUMAN_READABLE_VERSION);
+console.log('\u{1F50A}Human readable version is', HUMAN_READABLE_VERSION);
 // eslint-disable-next-line no-console
-console.log('Machine readable version is', MACHINE_READABLE_VERSION);
+console.log('\u{1F50A}Machine readable version is', MACHINE_READABLE_VERSION);
 
 if (Math.random() < 0.001 && typeof CHANNEL === 'undefined') {
   let can = true;

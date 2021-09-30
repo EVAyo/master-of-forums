@@ -1365,7 +1365,7 @@ const MASTER_OF_FORUMS = () => {
                   </div>
                   <div class="discussion-list-item-content">
                     <div>
-                      <span class="content-username"><a href="${i.userId === 0 ? GM_info.script?.homepage : `space-username-${encodeURIComponent(i.userName)}.html`}" target="_blank">${i.userName ? i.userName : '\u{533F}\u{540D}'}</a></span>${i.discussionTime ? '&nbsp;<span class="content-bull">&bull;</span>&nbsp;' : ''}<time class="content-time" pubdate data-date="${i.discussionDate}">${i.discussionTime}</time>
+                      <span class="content-username"><a href="${i.userId === 0 ? GM_info.script?.homepage : `space-username-${encodeURIComponent(i.userName)}.html`}" target="_blank">${i.userName ? i.userName : '\u{533F}\u{540D}'}</a></span>&nbsp;<span class="content-bull">&bull;</span>&nbsp;<time class="content-time" pubdate data-date="${i.discussionDate}">${i.discussionTime || i.discussionDate}</time>
                       <span class="content-count">\u{1F4AC}<samp>${String(i.discussionCount).padStart(3, ' ').replaceAll(' ', '&nbsp;')}</samp></span>
                     </div>
                     <div>
