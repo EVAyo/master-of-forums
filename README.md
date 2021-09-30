@@ -12,7 +12,7 @@
 * 论坛大师用户脚本支持 [Tampermonkey](https://www.tampermonkey.net/) 和 [Violentmonkey（暴力猴）](https://violentmonkey.github.io/)（用户脚本管理器）。
 
 ### 脚本界面
-[![](https://i.imgur.com/FNuplMv.png)](https://github.com/master-of-forums/master-of-forums)
+[![](https://i.imgur.com/FNuplMv.png)](../..)
 
 ### 安装扩展（任选其一）
 扩展名字 | 安装地址
