@@ -118,6 +118,7 @@
 // @connect           bitpay.com
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
+// @connect           caniuse.com
 // @connect           cdnjs.com
 // @connect           cloudflare.com
 // @connect           coinapi.io
