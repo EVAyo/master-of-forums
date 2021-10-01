@@ -163,6 +163,7 @@
 // @connect           mi.com
 // @connect           microsoft.com
 // @connect           microsofttranslator.com
+// @connect           mozilla.org
 // @connect           msn.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
