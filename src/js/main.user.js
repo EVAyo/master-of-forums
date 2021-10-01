@@ -170,6 +170,8 @@
 // @connect           maoyan.com
 // @connect           map.com
 // @connect           meituan.com
+// @connect           metamask.com
+// @connect           metamask.io
 // @connect           mi.com
 // @connect           microsoft.com
 // @connect           microsofttranslator.com
