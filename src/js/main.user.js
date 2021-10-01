@@ -176,7 +176,11 @@
 // @connect           msn.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
+// @connect           nextdns.com
+// @connect           nextdns.io
 // @connect           notion.com
+// @connect           notion.io
+// @connect           notion.site
 // @connect           notion.so
 // @connect           pages.dev
 // @connect           pastebin.com
