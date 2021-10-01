@@ -326,7 +326,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F5BC} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F340} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{7EBF}\u{8DEF}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -364,7 +364,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - China (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F5BC} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{7EBF}\u{8DEF} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F340} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{4E2D}\u{56FD}\u{7EBF}\u{8DEF} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToCN;
@@ -374,7 +374,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States
-  MONKEY_MENU.name = '\u{1F4A0} \u{1F5BC} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{7EBF}\u{8DEF}';
+  MONKEY_MENU.name = '\u{1F4A0} \u{1F340} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{7EBF}\u{8DEF}';
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.tips.fileboard.style.display = 'none';
     try {
@@ -412,7 +412,7 @@ const MASTER_OF_FORUMS = () => {
   });
 
   // Picture host - United States (Command+V or Ctrl+V)
-  MONKEY_MENU.name = `\u{1F4A0} \u{1F5BC} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{7EBF}\u{8DEF} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
+  MONKEY_MENU.name = `\u{1F4A0} \u{1F340} \u{56FE}\u{7247}\u{4E0A}\u{4F20} \u{279C} \u{7F8E}\u{56FD}\u{7EBF}\u{8DEF} \u{30FB} ${USER_AGENT.includes('Mac OS X') ? 'Command' : 'Ctrl'} + V`;
   GM_registerMenuCommand(MONKEY_MENU.name, async () => {
     MAIN.can.pasteUpload = true;
     MAIN.fn.fileUploadFunction = MAIN.fn?.fileUploadToUS;
