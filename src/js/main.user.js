@@ -96,6 +96,7 @@
 // @compatible        Vivaldi
 // @connect           *
 // @connect           self
+// @connect           1.1.1.1
 // @connect           163.com
 // @connect           aichat.net
 // @connect           alibaba.com
@@ -116,11 +117,13 @@
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
 // @connect           cdnjs.com
+// @connect           cloudflare.com
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com
 // @connect           discord.com
 // @connect           discord.gg
+// @connect           dns.com
 // @connect           docker.com
 // @connect           docker.io
 // @connect           douban.com
@@ -145,6 +148,7 @@
 // @connect           jsdelivr.com
 // @connect           jsdelivr.net
 // @connect           maoyan.com
+// @connect           map.com
 // @connect           master-of-forums.github.io
 // @connect           master-of-forums.gitlab.io
 // @connect           meituan.com
@@ -153,6 +157,7 @@
 // @connect           microsofttranslator.com
 // @connect           msn.com
 // @connect           myqcloud.com
+// @connect           namesilo.com
 // @connect           notion.com
 // @connect           notion.so
 // @connect           pages.dev
