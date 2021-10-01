@@ -119,6 +119,7 @@
 // @connect           docker.com
 // @connect           docker.io
 // @connect           douban.com
+// @connect           esm.run
 // @connect           facebook.com
 // @connect           fbi.gov
 // @connect           flickr.com
@@ -146,6 +147,7 @@
 // @connect           pastebin.com
 // @connect           paypal.com
 // @connect           pinduoduo.com
+// @connect           qiniu.com
 // @connect           qq.com
 // @connect           random.org
 // @connect           raw.githubusercontent.com
