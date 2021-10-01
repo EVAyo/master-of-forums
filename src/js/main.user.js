@@ -110,6 +110,7 @@
 // @connect           amazon.com
 // @connect           api.imgur.com
 // @connect           api.video
+// @connect           apple.com
 // @connect           appspot.com
 // @connect           baidu.com
 // @connect           bancor.network
