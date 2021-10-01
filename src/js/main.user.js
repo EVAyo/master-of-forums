@@ -99,6 +99,7 @@
 // @connect           163.com
 // @connect           aichat.net
 // @connect           alibaba.com
+// @connect           alibabacloud.com
 // @connect           alicdn.com
 // @connect           alimama.com
 // @connect           aliyun.com
