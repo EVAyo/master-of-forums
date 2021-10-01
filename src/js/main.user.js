@@ -104,6 +104,7 @@
 // @connect           aliyun.com
 // @connect           aliyuncs.com
 // @connect           amap.com
+// @connect           amazon.com
 // @connect           api.imgur.com
 // @connect           api.video
 // @connect           appspot.com
@@ -147,6 +148,7 @@
 // @connect           mi.com
 // @connect           microsoft.com
 // @connect           microsofttranslator.com
+// @connect           msn.com
 // @connect           myqcloud.com
 // @connect           notion.com
 // @connect           notion.so
@@ -179,8 +181,11 @@
 // @connect           vercel.com
 // @connect           wechat.com
 // @connect           whatsapp.com
+// @connect           wikipedia.org
 // @connect           workers.dev
 // @connect           wukong.com
+// @connect           yahoo.com
+// @connect           yandex.com
 // @connect           youdao.com
 // @connect           zoom.us
 // @run-at            document-start
