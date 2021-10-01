@@ -1792,7 +1792,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: `\u{1F38A}\u{7B7E}\u{5230}\u{6210}\u{529F}（${content.match(/<div class="cell">(.+?\s+?\d+\s+?天)<\/div>/)[1]}）`,
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: 'https://www.v2ex.com/apple-touch-icon.png',
               timeout: 9 * 1000,
               onclick: () => {
                 GM_openInTab(`//${HOSTNAME}/balance`, {
@@ -1805,7 +1805,7 @@ const MASTER_OF_FORUMS = () => {
               GM_notification({
                 title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
                 text: message,
-                image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+                image: 'https://www.v2ex.com/apple-touch-icon.png',
                 timeout: 9 * 1000,
                 onclick: () => {
                   GM_openInTab(`//${HOSTNAME}/notifications`, {
@@ -1818,7 +1818,7 @@ const MASTER_OF_FORUMS = () => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
               text: '\u{7B7E}\u{5230}\u{5931}\u{8D25}\u{FF01}',
-              image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+              image: 'https://www.v2ex.com/apple-touch-icon.png',
               timeout: 4 * 1000,
             });
           }
@@ -1827,7 +1827,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{7B7E}\u{5230}\u{9519}\u{8BEF}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: 'https://www.v2ex.com/apple-touch-icon.png',
             timeout: 4 * 1000,
           });
         },
@@ -1835,7 +1835,7 @@ const MASTER_OF_FORUMS = () => {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
             text: '\u{7B7E}\u{5230}\u{8D85}\u{65F6}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            image: 'https://www.v2ex.com/apple-touch-icon.png',
             timeout: 4 * 1000,
           });
         },
