@@ -127,6 +127,8 @@
 // @connect           gitbook.io
 // @connect           github.com
 // @connect           gitlab.com
+// @connect           google.com
+// @connect           googleapis.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
 // @connect           ibm.com
@@ -140,6 +142,8 @@
 // @connect           master-of-forums.gitlab.io
 // @connect           meituan.com
 // @connect           mi.com
+// @connect           microsoft.com
+// @connect           microsofttranslator.com
 // @connect           myqcloud.com
 // @connect           notion.com
 // @connect           notion.so
