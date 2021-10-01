@@ -141,7 +141,9 @@
 // @connect           gitbook.com
 // @connect           gitbook.io
 // @connect           github.com
+// @connect           github.io
 // @connect           gitlab.com
+// @connect           gitlab.io
 // @connect           google.com
 // @connect           googleapis.com
 // @connect           httpbin.org
@@ -160,8 +162,6 @@
 // @connect           mail.com
 // @connect           maoyan.com
 // @connect           map.com
-// @connect           master-of-forums.github.io
-// @connect           master-of-forums.gitlab.io
 // @connect           meituan.com
 // @connect           mi.com
 // @connect           microsoft.com
