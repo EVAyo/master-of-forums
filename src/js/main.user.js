@@ -173,6 +173,7 @@
 // @connect           travis-ci.com
 // @connect           travis-ci.org
 // @connect           travis.com
+// @connect           tumblr.com
 // @connect           twitter.com
 // @connect           vercel.app
 // @connect           vercel.com
