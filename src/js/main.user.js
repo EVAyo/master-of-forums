@@ -114,10 +114,14 @@
 // @connect           bcebos.com
 // @connect           bilibili.com
 // @connect           bing.com
+// @connect           bitpay.com
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
 // @connect           cdnjs.com
 // @connect           cloudflare.com
+// @connect           coinapi.io
+// @connect           coinbase.com
+// @connect           coindesk.com
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com
@@ -141,12 +145,16 @@
 // @connect           hualigs.cn
 // @connect           huawei.com
 // @connect           huaweicloud.com
+// @connect           huobi.com
 // @connect           ibm.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
+// @connect           ipfs.io
 // @connect           jd.com
 // @connect           jsdelivr.com
 // @connect           jsdelivr.net
+// @connect           lunarcrush.com
+// @connect           mail.com
 // @connect           maoyan.com
 // @connect           map.com
 // @connect           master-of-forums.github.io
@@ -166,6 +174,7 @@
 // @connect           pinduoduo.com
 // @connect           qiniu.com
 // @connect           qq.com
+// @connect           quran.com
 // @connect           random.org
 // @connect           raw.githubusercontent.com
 // @connect           shields.io
@@ -197,6 +206,7 @@
 // @connect           yahoo.com
 // @connect           yandex.com
 // @connect           youdao.com
+// @connect           zhihu.com
 // @connect           zoom.us
 // @run-at            document-start
 // @resource          MainCSS https://github.com/master-of-forums/master-of-forums/raw/main/src/css/main.css
