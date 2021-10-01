@@ -136,6 +136,8 @@
 // @connect           googleapis.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
+// @connect           huawei.com
+// @connect           huaweicloud.com
 // @connect           ibm.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
@@ -166,6 +168,7 @@
 // @connect           slack.com
 // @connect           soundcloud.com
 // @connect           spotify.com
+// @connect           ssllabs.com
 // @connect           suning.com
 // @connect           taobao.com
 // @connect           tcloudbase.com
