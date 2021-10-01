@@ -113,6 +113,7 @@
 // @connect           apple.com
 // @connect           appspot.com
 // @connect           baidu.com
+// @connect           baidubce.com
 // @connect           bancor.network
 // @connect           bcebos.com
 // @connect           bilibili.com
