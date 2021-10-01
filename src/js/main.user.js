@@ -134,6 +134,9 @@
 // @connect           esm.run
 // @connect           facebook.com
 // @connect           fbi.gov
+// @connect           feishu.cn
+// @connect           feishu.com
+// @connect           feishu.io
 // @connect           flickr.com
 // @connect           gitbook.com
 // @connect           gitbook.io
