@@ -111,7 +111,6 @@
 // @connect           bilibili.com
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
-// @connect           cdn.jsdelivr.net
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com
@@ -133,6 +132,8 @@
 // @connect           image.kieng.cn
 // @connect           imgurl.org
 // @connect           jd.com
+// @connect           jsdelivr.com
+// @connect           jsdelivr.net
 // @connect           maoyan.com
 // @connect           master-of-forums.github.io
 // @connect           master-of-forums.gitlab.io
