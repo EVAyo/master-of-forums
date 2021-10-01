@@ -1861,7 +1861,7 @@ const MASTER_OF_FORUMS = () => {
     }
 
     // Base64 Decode
-    MONKEY_MENU.name = '\u{1F48E} \u{1F501} Base64 Decode（\u{89E3}\u{7801}）';
+    MONKEY_MENU.name = '\u{1F48E} Base64 Decode（\u{89E3}\u{7801}）';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
       // eslint-disable-next-line no-alert
       const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{89E3}\u{7801}）').trim();
@@ -1887,7 +1887,7 @@ const MASTER_OF_FORUMS = () => {
     });
 
     // Base64 Encode
-    MONKEY_MENU.name = '\u{1F48E} \u{1F501} Base64 Encode（\u{7F16}\u{7801}）';
+    MONKEY_MENU.name = '\u{1F48E} Base64 Encode（\u{7F16}\u{7801}）';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
       // eslint-disable-next-line no-alert
       const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{7F16}\u{7801}）').trim();
