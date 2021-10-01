@@ -317,7 +317,7 @@ const MASTER_OF_FORUMS = () => {
 
   // Open page in new tab
   // Open page in new privacy window
-  MONKEY_MENU.name = GM_info.scriptHandler === 'Tampermonkey' ? '\u{1F4A0} \u{1F3AD} \u{6253}\u{5F00}\u{9875}\u{9762}\u{FF08}\u{9690}\u{8EAB}\u{6A21}\u{5F0F}\u{FF09}' : '\u{1F4A0} \u{1F195} \u{6253}\u{5F00}\u{9875}\u{9762}\u{FF08}\u{65B0}\u{7684}\u{6807}\u{7B7E}\u{FF09}';
+  MONKEY_MENU.name = GM_info.scriptHandler === 'Tampermonkey' ? '\u{1F4A0} \u{1F99D} \u{6253}\u{5F00}\u{9875}\u{9762}\u{FF08}\u{9690}\u{8EAB}\u{6A21}\u{5F0F}\u{FF09}' : '\u{1F4A0} \u{1F195} \u{6253}\u{5F00}\u{9875}\u{9762}\u{FF08}\u{65B0}\u{7684}\u{6807}\u{7B7E}\u{FF09}';
   GM_registerMenuCommand(MONKEY_MENU.name, () => {
     GM_openInTab(HREF, {
       active: true,
