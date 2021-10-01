@@ -619,6 +619,23 @@ img.master-badge:hover,
   color: var(--main-info);
 }
 
+.discussion-list-fail {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-image: url(//api.wolai.com/v1/icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: 0 0 0.25rem var(--main-gray);
+}
+
+.discussion-list-fail:hover {
+  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp);
+  box-shadow: 0 0 0.5rem var(--main-gray);
+}
+
 /* Drawer Guide */
 @keyframes drawer-guide-move {
   from { left: 2rem; }

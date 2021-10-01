@@ -1402,11 +1402,11 @@ const MASTER_OF_FORUMS = () => {
           },
           onerror: () => {
             event.target.classList.remove('loading');
-            document.getElementById('discussion-list').innerHTML = `<h2 style="padding-top: 2rem; text-align: center; font-size: 4rem; color: var(--main-danger);"><a href="${MAIN.repository}" target="_blank">\u{1F62D}</a></h2>`;
+            document.getElementById('discussion-list').innerHTML = `<a href="${MAIN.repository}" target="_blank"><div class="discussion-list-fail discussion-list-fail-error"></div></a>`;
           },
           ontimeout: () => {
             event.target.classList.remove('loading');
-            document.getElementById('discussion-list').innerHTML = `<h2 style="padding-top: 2rem; text-align: center; font-size: 4rem; color: var(--main-danger);"><a href="${MAIN.repository}" target="_blank">\u{1F641}</a></h2>`;
+            document.getElementById('discussion-list').innerHTML = `<a href="${MAIN.repository}" target="_blank"><div class="discussion-list-fail discussion-list-fail-timeout"></div></a>`;
           },
         });
       }
