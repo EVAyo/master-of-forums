@@ -103,12 +103,14 @@
 // @connect           alimama.com
 // @connect           aliyun.com
 // @connect           aliyuncs.com
+// @connect           amap.com
 // @connect           api.imgur.com
 // @connect           api.video
 // @connect           appspot.com
 // @connect           baidu.com
 // @connect           bcebos.com
 // @connect           bilibili.com
+// @connect           bing.com
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
 // @connect           dianping.com
