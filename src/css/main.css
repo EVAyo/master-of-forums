@@ -619,24 +619,32 @@ img.master-badge:hover,
   color: var(--main-info);
 }
 
-.discussion-list-fail {
+.discussion-list .discussion-list-fail {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 8rem;
   height: 8rem;
-  background-image: url(//api.wolai.com/v1/icon);
+  background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/hsts-pixel.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem var(--main-gray);
+  box-shadow: 0 0 1rem var(--main-gray);
   transform: translate(-50%, -50%);
 }
 
-.discussion-list-fail:hover {
+.discussion-list .discussion-list-fail-error {
+  background-image: url(//api.wolai.com/v1/icon?type=0);
+}
+
+.discussion-list .discussion-list-fail-timeout {
+  background-image: url(//api.wolai.com/v1/icon?type=1);
+}
+
+.discussion-list .discussion-list-fail:hover {
   background-image: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp);
-  box-shadow: 0 0 1rem var(--main-gray);
+  background-size: 4rem 4rem;
 }
 
 /* Drawer Guide */
