@@ -113,6 +113,7 @@
 // @connect           bing.com
 // @connect           blockchain.com
 // @connect           buymeacoffee.com
+// @connect           cdnjs.com
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com
