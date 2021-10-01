@@ -1859,6 +1859,49 @@ const MASTER_OF_FORUMS = () => {
         },
       });
     }
+
+    // Base64 Decode
+    MONKEY_MENU.name = '\u{1F48E} \u{1F171} Base64 Decode（\u{89E3}\u{7801}）';
+    GM_registerMenuCommand(MONKEY_MENU.name, () => {
+      // eslint-disable-next-line no-alert
+      const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{89E3}\u{7801}）').trim();
+      if (content) {
+        try {
+          const data = atob(content);
+          GM_setClipboard(data, 'text');
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: `\u{89E3}\u{7801}\u{7ED3}\u{679C}：${data}（\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}）`,
+            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            timeout: 60 * 1000,
+          });
+        } catch (error) {
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{89E3}\u{7801}\u{5931}\u{8D25}\u{FF01}',
+            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            timeout: 4 * 1000,
+          });
+        }
+      }
+    });
+
+    // Base64 Encode
+    MONKEY_MENU.name = '\u{1F48E} \u{1F171} Base64 Encode（\u{7F16}\u{7801}）';
+    GM_registerMenuCommand(MONKEY_MENU.name, () => {
+      // eslint-disable-next-line no-alert
+      const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{7F16}\u{7801}）').trim();
+      if (content) {
+        const data = btoa(content);
+        GM_setClipboard(data, 'text');
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: `\u{7F16}\u{7801}\u{7ED3}\u{679C}：${data}（\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}）`,
+          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          timeout: 9 * 1000,
+        });
+      }
+    });
   };
 
   MAIN.fn.ωωω_hostloc_com = () => {
