@@ -98,6 +98,7 @@
 // @connect           self
 // @connect           1.1.1.1
 // @connect           163.com
+// @connect           aichat.com
 // @connect           aichat.net
 // @connect           alibaba.com
 // @connect           alibabacloud.com
@@ -131,12 +132,15 @@
 // @connect           docker.com
 // @connect           docker.io
 // @connect           douban.com
+// @connect           epicgames.com
 // @connect           esm.run
 // @connect           facebook.com
 // @connect           fbi.gov
 // @connect           feishu.cn
 // @connect           feishu.com
 // @connect           feishu.io
+// @connect           filecoin.com
+// @connect           filecoin.io
 // @connect           flickr.com
 // @connect           gitbook.com
 // @connect           gitbook.io
@@ -144,6 +148,7 @@
 // @connect           github.io
 // @connect           gitlab.com
 // @connect           gitlab.io
+// @connect           gog.com
 // @connect           google.com
 // @connect           googleapis.com
 // @connect           httpbin.org
@@ -154,6 +159,7 @@
 // @connect           ibm.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
+// @connect           ipfs.com
 // @connect           ipfs.io
 // @connect           jd.com
 // @connect           jsdelivr.com
@@ -187,7 +193,9 @@
 // @connect           soundcloud.com
 // @connect           spotify.com
 // @connect           ssllabs.com
+// @connect           steampowered.com
 // @connect           suning.com
+// @connect           t.cn
 // @connect           taobao.com
 // @connect           tcloudbase.com
 // @connect           telegram.org
@@ -202,6 +210,8 @@
 // @connect           vercel.app
 // @connect           vercel.com
 // @connect           wechat.com
+// @connect           weibo.cn
+// @connect           weibo.com
 // @connect           whatsapp.com
 // @connect           wikipedia.org
 // @connect           wolai.com
@@ -211,6 +221,8 @@
 // @connect           yandex.com
 // @connect           youdao.com
 // @connect           zhihu.com
+// @connect           zoom.com
+// @connect           zoom.io
 // @connect           zoom.us
 // @run-at            document-start
 // @resource          MainCSS https://github.com/master-of-forums/master-of-forums/raw/main/src/css/main.css
