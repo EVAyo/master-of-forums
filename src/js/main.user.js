@@ -182,6 +182,7 @@
 // @connect           wechat.com
 // @connect           whatsapp.com
 // @connect           wikipedia.org
+// @connect           wolai.com
 // @connect           workers.dev
 // @connect           wukong.com
 // @connect           yahoo.com
