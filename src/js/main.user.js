@@ -220,6 +220,8 @@
 // @connect           redis.io
 // @connect           redislabs.com
 // @connect           shields.io
+// @connect           shodan.com
+// @connect           shodan.io
 // @connect           signal.org
 // @connect           slack.com
 // @connect           soundcloud.com
