@@ -149,6 +149,8 @@
 // @connect           feishu.io
 // @connect           filecoin.com
 // @connect           filecoin.io
+// @connect           firebase.com
+// @connect           firebaseio.com
 // @connect           flickr.com
 // @connect           gitbook.com
 // @connect           gitbook.io
@@ -189,10 +191,12 @@
 // @connect           mi.com
 // @connect           microsoft.com
 // @connect           microsofttranslator.com
+// @connect           mongodb.com
 // @connect           mozilla.org
 // @connect           msn.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
+// @connect           netflix.com
 // @connect           nextdns.com
 // @connect           nextdns.io
 // @connect           notion.com
@@ -208,6 +212,9 @@
 // @connect           quran.com
 // @connect           random.org
 // @connect           raw.githubusercontent.com
+// @connect           redis.com
+// @connect           redis.io
+// @connect           redislabs.com
 // @connect           shields.io
 // @connect           signal.org
 // @connect           slack.com
@@ -233,6 +240,7 @@
 // @connect           travis.org
 // @connect           tumblr.com
 // @connect           twitter.com
+// @connect           typeform.com
 // @connect           uniswap.org
 // @connect           vercel.app
 // @connect           vercel.com
@@ -247,7 +255,9 @@
 // @connect           xueqiu.com
 // @connect           yahoo.com
 // @connect           yandex.com
+// @connect           ycombinator.com
 // @connect           youdao.com
+// @connect           youtube.com
 // @connect           zhihu.com
 // @connect           zoom.com
 // @connect           zoom.io
