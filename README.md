@@ -2,7 +2,7 @@
 [![Master of Forums - GitHub](https://img.shields.io/badge/论坛大师-GitHub-blue?style=flat-square&logo=GitHub)](https://github.com/master-of-forums/master-of-forums)
 [![Master of Forums - GitHub](https://img.shields.io/badge/论坛大师-GitLab-blue?style=flat-square&logo=GitLab)](https://gitlab.com/master-of-forums/master-of-forums)
 [![Mozilla Public License Version 2.0](https://img.shields.io/badge/License-MPL%202.0-blue?style=flat-square&logo=Open%20Source%20Initiative)](https://www.mozilla.org/MPL/2.0/)
-[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hd/master-of-forums/master-of-forums?style=flat-square&logo=TurboSquid&label=日活用户&color=blue)](../..)
+[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hd/master-of-forums/master-of-forums?style=flat-square&logo=jsDelivr&label=日活用户&color=blue)](../..)
 [![Rating](https://img.shields.io/badge/Rating-⭐%20⭐%20⭐%20⭐%20⭐-blue?style=flat-square&logo=Macy’s)](../..)
 
 ### 论坛网站页面美化、广告移除、功能增强。美轮美奂的视觉享受，安然恬静的论坛时光……
