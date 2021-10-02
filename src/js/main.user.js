@@ -97,6 +97,7 @@
 // @connect           *
 // @connect           self
 // @connect           1.1.1.1
+// @connect           100.com
 // @connect           163.com
 // @connect           360.com
 // @connect           aichat.com
@@ -225,6 +226,7 @@
 // @connect           shodan.io
 // @connect           signal.org
 // @connect           slack.com
+// @connect           so.com
 // @connect           soundcloud.com
 // @connect           spotify.com
 // @connect           ssllabs.com
