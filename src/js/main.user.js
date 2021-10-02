@@ -1875,11 +1875,20 @@ const MASTER_OF_FORUMS = () => {
     // Base64 Decode
     MONKEY_MENU.name = '\u{1F48E} Base64 Decode（\u{89E3}\u{7801}）';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
-      // eslint-disable-next-line no-alert
-      const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{89E3}\u{7801}）').trim();
+      const content = window.getSelection()?.toString()
+        ?.replaceAll('：', '')
+        ?.replaceAll(':', '')
+        ?.replaceAll(' ', '')
+        ?.replaceAll('\n', '')
+        ?.trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{89E3}\u{7801}）') // eslint-disable-line no-alert
+        ?.replaceAll('：', '')
+        ?.replaceAll(':', '')
+        ?.replaceAll(' ', '')
+        ?.replaceAll('\n', '')
+        ?.trim();
       if (content) {
         try {
-          const data = atob(content);
+          const data = decodeURIComponent(atob(content));
           GM_setClipboard(data, 'text');
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -1903,10 +1912,9 @@ const MASTER_OF_FORUMS = () => {
     // Base64 Encode
     MONKEY_MENU.name = '\u{1F48E} Base64 Encode（\u{7F16}\u{7801}）';
     GM_registerMenuCommand(MONKEY_MENU.name, () => {
-      // eslint-disable-next-line no-alert
-      const content = window.getSelection().toString().trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{7F16}\u{7801}）').trim();
+      const content = window.getSelection()?.toString()?.trim() || prompt('\u{8F93}\u{5165}\u{5185}\u{5BB9}（\u{7F16}\u{7801}）')?.trim(); // eslint-disable-line no-alert
       if (content) {
-        const data = btoa(content);
+        const data = btoa(encodeURIComponent(content));
         GM_setClipboard(data, 'text');
         GM_notification({
           title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
