@@ -174,6 +174,7 @@
 // @connect           jsdelivr.net
 // @connect           justswap.com
 // @connect           justswap.io
+// @connect           ledger.com
 // @connect           lunarcrush.com
 // @connect           mail.com
 // @connect           maoyan.com
