@@ -2081,7 +2081,6 @@ const MASTER_OF_FORUMS = () => {
         '\u{5993}\u{5973}',
         '\u{5A4A}\u{5B50}',
         '\u{5C04}\u{7CBE}',
-        '\u{5C0F}\u{59D0}',
         '\u{5C41}\u{80A1}',
         '\u{5C60}\u{6740}',
         '\u{5F3A}\u{5978}',
@@ -2174,6 +2173,8 @@ const MASTER_OF_FORUMS = () => {
       const CHAR = new Map([
         ['\u{4E73}', 'Rǔ'],
         ['\u{5AD6}', 'Piáo'],
+        ['\u{5C0F}\u{59D0}\u{59D0}', 'XiǎoJiěJiě'],
+        ['\u{5C0F}\u{59D0}', 'XiǎoJiě'],
         ['\u{6DEB}', 'Yín'],
       ]);
       for (const [key, value] of CHAR) {
