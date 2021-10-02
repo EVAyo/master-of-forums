@@ -107,7 +107,7 @@ html {
 .sign a .t_table [align="Center"] [color="#EFAA00"],
 .sign a .t_table [color="#EFAA00"] [align="center"],
 .sign a .t_table [color="#EFAA00"] [align="Center"],
-.sign a[href*="&action=logout"],
+.sign a[href*="action=logout"],
 .wp .dnch_eo_pb,
 .wp .dnch_eo_pt,
 .wp.a_h,
