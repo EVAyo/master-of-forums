@@ -112,6 +112,8 @@
 // @connect           api.video
 // @connect           apple.com
 // @connect           appspot.com
+// @connect           asciinema.com
+// @connect           asciinema.org
 // @connect           baidu.com
 // @connect           baidubce.com
 // @connect           bancor.network
@@ -123,6 +125,8 @@
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
 // @connect           cdnjs.com
+// @connect           chromium.com
+// @connect           chromium.org
 // @connect           cloudflare.com
 // @connect           coinapi.io
 // @connect           coinbase.com
