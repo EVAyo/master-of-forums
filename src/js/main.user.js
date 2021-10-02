@@ -1049,6 +1049,18 @@ const MASTER_OF_FORUMS = () => {
     }
   };
 
+  // Audio Notice
+  MAIN.fn.audio = () => {
+    if (typeof MAIN.tips?.audio === 'undefined') {
+      MAIN.tips.audio = document.createElement('audio');
+      MAIN.tips.audio.src = '//cdn.jin10.com/assets/media/notice.wav';
+      MAIN.tips.audio.type = 'audio/x-wav';
+      MAIN.tips.audio.crossOrigin = 'anonymous';
+      MAIN.NODE.append(MAIN.tips.audio);
+    }
+    MAIN.tips?.audio?.play();
+  };
+
   MAIN.actions.postreview = (n) => {
     GM_setValue(`${HOSTNAME}_actions_postreview_execution_timestamp`, Date.now());
     const THREAD_ID = MAIN.fn?.getThreadID();
@@ -1182,13 +1194,6 @@ const MASTER_OF_FORUMS = () => {
   MAIN.tips.main = document.createElement('div');
   MAIN.tips.main.id = 'main-tip';
   MAIN.NODE.append(MAIN.tips.main);
-
-  // Audio Notice
-  MAIN.tips.audio = document.createElement('audio');
-  MAIN.tips.audio.src = '//cdn.jin10.com/assets/media/notice.wav';
-  MAIN.tips.audio.type = 'audio/x-wav';
-  MAIN.tips.audio.crossOrigin = 'anonymous';
-  MAIN.NODE.append(MAIN.tips.audio);
 
   // Fileboard
   MAIN.tips.fileboard = document.createElement('div');
@@ -1829,7 +1834,7 @@ const MASTER_OF_FORUMS = () => {
               },
             });
             // Audio Notice
-            MAIN.tips?.audio?.play();
+            MAIN.fn?.audio();
 
             if (content.includes('<a href="/notifications" class="fade">') && content.includes('<a href="/notifications" class="fade">0') === false) {
               const message = `\u{1F50A}\u{60A8}\u{6709} ${content.match(/<a href="\/notifications" class="fade">(.+?)</)[1]}`;
@@ -1898,7 +1903,7 @@ const MASTER_OF_FORUMS = () => {
             timeout: 60 * 1000,
           });
           // Audio Notice
-          MAIN.tips?.audio?.play();
+          MAIN.fn?.audio();
         } catch (error) {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -1924,7 +1929,7 @@ const MASTER_OF_FORUMS = () => {
           timeout: 9 * 1000,
         });
         // Audio Notice
-        MAIN.tips?.audio?.play();
+        MAIN.fn?.audio();
       }
     });
   };
@@ -1987,7 +1992,7 @@ const MASTER_OF_FORUMS = () => {
             },
           });
           // Audio Notice
-          MAIN.tips?.audio?.play();
+          MAIN.fn?.audio();
         }, 15 * 1000);
       }
     });
