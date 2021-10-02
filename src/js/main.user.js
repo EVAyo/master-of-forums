@@ -1828,6 +1828,9 @@ const MASTER_OF_FORUMS = () => {
                 });
               },
             });
+            // Audio Notice
+            MAIN.tips?.audio?.play();
+
             if (content.includes('<a href="/notifications" class="fade">') && content.includes('<a href="/notifications" class="fade">0') === false) {
               const message = `\u{1F50A}\u{60A8}\u{6709} ${content.match(/<a href="\/notifications" class="fade">(.+?)</)[1]}`;
               GM_notification({
@@ -1841,8 +1844,6 @@ const MASTER_OF_FORUMS = () => {
                   });
                 },
               });
-              // Audio Notice
-              MAIN.tips?.audio?.play();
             }
           } else {
             GM_notification({
