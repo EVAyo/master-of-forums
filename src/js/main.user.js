@@ -2040,7 +2040,9 @@ const MASTER_OF_FORUMS = () => {
     MAIN.fn.internetCensorship = (content) => {
       let data = content;
       const DATA_LIST = [
+        '\u{4E00}\u{515A}',
         '\u{4E07}\u{91CC}',
+        '\u{4E13}\u{653F}',
         '\u{4E16}\u{754C}\u{901A}',
         '\u{4E1C}\u{7A81}',
         '\u{4E2D}\u{592E}\u{519B}\u{59D4}',
