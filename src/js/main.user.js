@@ -859,7 +859,7 @@ const MASTER_OF_FORUMS = () => {
             GM_setClipboard(content.data?.link, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{6587}\u{4EF6}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{6587}\u{4EF6}\u{4F53}\u{79EF}：${content.data?.size} Byte`,
+              text: `\u{1F38A}\u{4E0A}\u{4F20}\u{6210}\u{529F}\u{FF0C}\u{6587}\u{4EF6}\u{7F51}\u{5740}\u{5DF2}\u{5199}\u{5165}\u{526A}\u{5207}\u{677F}\u{1F4CB}\n\u{1F4D6}\u{6587}\u{4EF6}\u{7C7B}\u{578B}：${content.data?.type}\n\u{1F4D6}\u{6587}\u{4EF6}\u{5C3A}\u{5BF8}：${content.data?.width} × ${content.data?.height} Pixel\n\u{1F4D6}\u{6587}\u{4EF6}\u{4F53}\u{79EF}：${content.data?.size?.toLocaleString('en-US')} Byte`,
               image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
               timeout: 9 * 1000,
               onclick: () => {
@@ -2150,6 +2150,14 @@ const MASTER_OF_FORUMS = () => {
     if (typeof alert === 'function') {
       unsafeWindow.alert = () => {};
     }
+
+    // Main CSS
+    setTimeout(() => {
+      GM_addStyle(GM_getResourceText('MainCSS'));
+    }, 0);
+    setTimeout(() => {
+      GM_addStyle(GM_getResourceText('MainCSS'));
+    }, 1000);
   };
 
   // Sites that enjoy special treatment
