@@ -98,6 +98,7 @@
 // @connect           self
 // @connect           1.1.1.1
 // @connect           163.com
+// @connect           360.com
 // @connect           aichat.com
 // @connect           aichat.net
 // @connect           alibaba.com
