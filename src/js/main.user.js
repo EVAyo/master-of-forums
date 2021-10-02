@@ -1182,6 +1182,13 @@ const MASTER_OF_FORUMS = () => {
   MAIN.tips.main.id = 'main-tip';
   MAIN.NODE.append(MAIN.tips.main);
 
+  // Audio Notice
+  MAIN.tips.audio = document.createElement('audio');
+  MAIN.tips.audio.src = '//cdn.jin10.com/assets/media/notice.wav';
+  MAIN.tips.audio.type = 'audio/x-wav';
+  MAIN.tips.audio.crossOrigin = 'anonymous';
+  MAIN.NODE.append(MAIN.tips.audio);
+
   // Fileboard
   MAIN.tips.fileboard = document.createElement('div');
   MAIN.tips.fileboard.className = 'main-fileboard';
@@ -1833,6 +1840,8 @@ const MASTER_OF_FORUMS = () => {
                   });
                 },
               });
+              // Audio Notice
+              MAIN.tips?.audio?.play();
             }
           } else {
             GM_notification({
@@ -1877,6 +1886,8 @@ const MASTER_OF_FORUMS = () => {
             image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
             timeout: 60 * 1000,
           });
+          // Audio Notice
+          MAIN.tips?.audio?.play();
         } catch (error) {
           GM_notification({
             title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -1902,6 +1913,8 @@ const MASTER_OF_FORUMS = () => {
           image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
           timeout: 9 * 1000,
         });
+        // Audio Notice
+        MAIN.tips?.audio?.play();
       }
     });
   };
@@ -1963,6 +1976,8 @@ const MASTER_OF_FORUMS = () => {
               });
             },
           });
+          // Audio Notice
+          MAIN.tips?.audio?.play();
         }, 15 * 1000);
       }
     });
@@ -2116,7 +2131,7 @@ const MASTER_OF_FORUMS = () => {
           setTimeout(() => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{6210}\u{529F}\u{7ED5}\u{8FC7}\u{7F51}\u{7EDC}\u{5BA1}\u{67E5}（${i}）`,
+              text: `\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（${i}）`,
               image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
               timeout: 4 * 1000,
             });
@@ -2134,7 +2149,7 @@ const MASTER_OF_FORUMS = () => {
           setTimeout(() => {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: `\u{6210}\u{529F}\u{7ED5}\u{8FC7}\u{7F51}\u{7EDC}\u{5BA1}\u{67E5}（${key}）\u{279C}（${value}）`,
+              text: `\u{6210}\u{529F}\u{7A81}\u{7834}\u{8A00}\u{8BBA}\u{5C01}\u{9501}（${key}）\u{279C}（${value}）`,
               image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
               timeout: 4 * 1000,
             });
