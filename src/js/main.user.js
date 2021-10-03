@@ -167,6 +167,7 @@
 // @connect           gog.com
 // @connect           google.com
 // @connect           googleapis.com
+// @connect           greasyfork.org
 // @connect           httpbin.org
 // @connect           hualigs.cn
 // @connect           huawei.com
@@ -178,6 +179,7 @@
 // @connect           ipfs.com
 // @connect           ipfs.io
 // @connect           jd.com
+// @connect           js.org
 // @connect           jsdelivr.com
 // @connect           jsdelivr.net
 // @connect           justswap.com
@@ -209,6 +211,8 @@
 // @connect           notion.io
 // @connect           notion.site
 // @connect           notion.so
+// @connect           openuserjs.org
+// @connect           openuserts.org
 // @connect           pages.dev
 // @connect           pastebin.com
 // @connect           paypal.com
@@ -230,6 +234,7 @@
 // @connect           soundcloud.com
 // @connect           spotify.com
 // @connect           ssllabs.com
+// @connect           stackoverflow.com
 // @connect           steampowered.com
 // @connect           suning.com
 // @connect           sushi.com
@@ -251,6 +256,8 @@
 // @connect           twitter.com
 // @connect           typeform.com
 // @connect           uniswap.org
+// @connect           userscript.org
+// @connect           userscripts.org
 // @connect           vercel.app
 // @connect           vercel.com
 // @connect           wechat.com
