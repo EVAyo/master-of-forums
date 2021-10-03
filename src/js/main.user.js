@@ -1482,6 +1482,7 @@ const MASTER_OF_FORUMS = () => {
           method: 'GET',
           url: `//master-of-forums.ids.workers.dev/?uuid=${GM_info.uuid || GM_info.script?.uuid}&hostname=${MAIN.data?.hostname}&data=postlist&sort=posttime`,
           headers: {
+            Referer: GM_info.script?.homepage,
             'X-Requested-With': 'XMLHttpRequest',
           },
           timeout: 9 * 1000,
