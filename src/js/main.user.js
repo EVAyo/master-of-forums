@@ -273,6 +273,7 @@
 // @connect           userscripts.org
 // @connect           vercel.app
 // @connect           vercel.com
+// @connect           vk.com
 // @connect           wechat.com
 // @connect           weibo.cn
 // @connect           weibo.com
