@@ -104,6 +104,7 @@
 // @connect           360.com
 // @connect           aichat.com
 // @connect           aichat.net
+// @connect           alexa.com
 // @connect           alibaba.com
 // @connect           alibabacloud.com
 // @connect           alicdn.com
@@ -231,6 +232,7 @@
 // @connect           shodan.com
 // @connect           shodan.io
 // @connect           signal.org
+// @connect           similarweb.com
 // @connect           slack.com
 // @connect           so.com
 // @connect           soundcloud.com
