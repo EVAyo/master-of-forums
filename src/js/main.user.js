@@ -98,6 +98,8 @@
 // @connect           self
 // @connect           1.1.1.1
 // @connect           100.com
+// @connect           10086.cn
+// @connect           139.com
 // @connect           163.com
 // @connect           360.com
 // @connect           aichat.com
