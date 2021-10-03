@@ -115,6 +115,7 @@
 // @connect           amazon.com
 // @connect           api.imgur.com
 // @connect           api.video
+// @connect           apiopen.top
 // @connect           apple.com
 // @connect           appspot.com
 // @connect           asciinema.com
@@ -171,12 +172,14 @@
 // @connect           google.com
 // @connect           googleapis.com
 // @connect           greasyfork.org
+// @connect           gugudata.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
 // @connect           huawei.com
 // @connect           huaweicloud.com
 // @connect           huobi.com
 // @connect           ibm.com
+// @connect           iciba.com
 // @connect           image.kieng.cn
 // @connect           imgurl.org
 // @connect           ipfs.com
@@ -187,6 +190,8 @@
 // @connect           jsdelivr.net
 // @connect           justswap.com
 // @connect           justswap.io
+// @connect           kaiyanapp.com
+// @connect           kuaidi.com
 // @connect           ledger.com
 // @connect           lunarcrush.com
 // @connect           mail.com
@@ -197,6 +202,7 @@
 // @connect           mdex.io
 // @connect           mdex.me
 // @connect           meituan.com
+// @connect           meizu.com
 // @connect           metamask.com
 // @connect           metamask.io
 // @connect           mi.com
@@ -231,9 +237,11 @@
 // @connect           shields.io
 // @connect           shodan.com
 // @connect           shodan.io
+// @connect           showapi.com
 // @connect           signal.org
 // @connect           similarweb.com
 // @connect           slack.com
+// @connect           snssdk.com
 // @connect           so.com
 // @connect           soundcloud.com
 // @connect           spotify.com
@@ -256,6 +264,7 @@
 // @connect           travis-ci.org
 // @connect           travis.com
 // @connect           travis.org
+// @connect           tuchong.com
 // @connect           tumblr.com
 // @connect           twitter.com
 // @connect           typeform.com
@@ -272,6 +281,7 @@
 // @connect           wolai.com
 // @connect           workers.dev
 // @connect           wukong.com
+// @connect           xiaomi.com
 // @connect           xueqiu.com
 // @connect           yahoo.com
 // @connect           yandex.com
