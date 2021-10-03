@@ -1474,7 +1474,7 @@ const MASTER_OF_FORUMS = () => {
     `);
     const THREAD_ID = MAIN.fn?.getThreadID();
     document.getElementById('discussion').addEventListener('mouseenter', (event) => {
-      if (typeof MAIN.can?.drawerDataCacheTime === 'undefined' || Date.now() - MAIN.can?.drawerDataCacheTime > 33 * 1000) {
+      if (typeof MAIN.can?.drawerDataCacheTime === 'undefined' || Date.now() - MAIN.can?.drawerDataCacheTime > 30 * 1000) {
         MAIN.can.drawerDataCacheTime = Date.now();
         document.getElementById('discussion-list').innerHTML = '';
         event.target.classList.add('loading');
