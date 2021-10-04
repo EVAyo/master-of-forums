@@ -1150,8 +1150,6 @@ const MASTER_OF_FORUMS = () => {
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = response.responseText;
-          MAIN.fn?.print(content);
-          MAIN.fn?.print(content.match(/<root><!\[CDATA\[(.+?)</)[1].trim());
           MAIN.tips.main.innerHTML = `\u{1F50A} <span style="color: firebrick;">${content.match(/<root><!\[CDATA\[(.+?)</)[1].trim()}</span>`;
           const {
             NODE_X, NODE_Y, NODE_WIDTH, NODE_HEIGHT,
@@ -1162,11 +1160,11 @@ const MASTER_OF_FORUMS = () => {
           MAIN.tips.main.style.top = `${NODE_Y - NODE_HEIGHT / 4}px`;
           MAIN.tips.main.style.display = 'inline-block';
           setTimeout(() => {
-            MAIN.tips.main.style.transition = 'opacity 7s ease-in';
+            MAIN.tips.main.style.transition = 'opacity 6s ease-in';
           }, 1 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.opacity = '0';
-          }, 2 * 1000);
+          }, 3 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
           }, 8.9 * 1000);
@@ -1180,7 +1178,7 @@ const MASTER_OF_FORUMS = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
             setTimeout(() => {
               MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
-            }, 3 * 1000);
+            }, 4 * 1000);
           };
           if (content.includes('\u{6295}\u{7968}\u{6210}\u{529F}') || content.includes('>postreviewupdate(')) {
             // 投票成功
