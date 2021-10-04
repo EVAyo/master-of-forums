@@ -1160,25 +1160,25 @@ const MASTER_OF_FORUMS = () => {
           MAIN.tips.main.style.top = `${NODE_Y - NODE_HEIGHT / 4}px`;
           MAIN.tips.main.style.display = 'inline-block';
           setTimeout(() => {
-            MAIN.tips.main.style.transition = 'opacity 6s ease-in';
+            MAIN.tips.main.style.transition = 'opacity 9s ease-in';
           }, 1 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.opacity = '0';
-          }, 3 * 1000);
+          }, 4 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
-          }, 8.9 * 1000);
+          }, 13.2 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.display = 'none';
             MAIN.tips.main.style.opacity = '1';
             GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
-          }, 9 * 1000);
+          }, 13.4 * 1000);
 
           const noticeMessage = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
             setTimeout(() => {
               MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
-            }, 4 * 1000);
+            }, 5 * 1000);
           };
           if (content.includes('\u{6295}\u{7968}\u{6210}\u{529F}') || content.includes('>postreviewupdate(')) {
             // 投票成功
@@ -1308,7 +1308,7 @@ const MASTER_OF_FORUMS = () => {
     const THIS_NODE_TARGET = event.target;
     if (THIS_NODE_TARGET.tagName.toLowerCase() === 'img' && THIS_NODE_TARGET.src.includes('/master-of-forums/master-of-forums/public/images/patch.')) {
       event.preventDefault();
-      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 10 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
+      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 15 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
         MAIN.actions?.support(THIS_NODE_TARGET);
       }
     }
