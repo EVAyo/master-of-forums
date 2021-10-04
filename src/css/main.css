@@ -608,6 +608,10 @@ img.master-badge:hover,
   height: 1rem;
 }
 
+.discussion-list-item-content .content-title a span {
+  background-color: #fff;
+}
+
 .content-title .content-permission {
   color: var(--main-gray);
 }
