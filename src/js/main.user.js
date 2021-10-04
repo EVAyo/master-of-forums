@@ -102,6 +102,7 @@
 // @connect           139.com
 // @connect           163.com
 // @connect           360.com
+// @connect           58.com
 // @connect           aichat.com
 // @connect           aichat.net
 // @connect           alexa.com
@@ -166,6 +167,7 @@
 // @connect           gitbook.io
 // @connect           github.com
 // @connect           github.io
+// @connect           githubusercontent.com
 // @connect           gitlab.com
 // @connect           gitlab.io
 // @connect           gog.com
@@ -173,6 +175,7 @@
 // @connect           googleapis.com
 // @connect           greasyfork.org
 // @connect           gugudata.com
+// @connect           hereapi.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
 // @connect           huawei.com
@@ -184,7 +187,9 @@
 // @connect           imgurl.org
 // @connect           ipfs.com
 // @connect           ipfs.io
+// @connect           iqiyi.com
 // @connect           jd.com
+// @connect           jin10.com
 // @connect           js.org
 // @connect           jsdelivr.com
 // @connect           jsdelivr.net
@@ -197,6 +202,7 @@
 // @connect           mail.com
 // @connect           maoyan.com
 // @connect           map.com
+// @connect           mapbox.com
 // @connect           mdex.co
 // @connect           mdex.com
 // @connect           mdex.io
@@ -220,6 +226,8 @@
 // @connect           notion.io
 // @connect           notion.site
 // @connect           notion.so
+// @connect           openlayers.org
+// @connect           openstreetmap.org
 // @connect           openuserjs.org
 // @connect           openuserts.org
 // @connect           pages.dev
@@ -227,10 +235,10 @@
 // @connect           paypal.com
 // @connect           pinduoduo.com
 // @connect           qiniu.com
+// @connect           qiyi.com
 // @connect           qq.com
 // @connect           quran.com
 // @connect           random.org
-// @connect           raw.githubusercontent.com
 // @connect           redis.com
 // @connect           redis.io
 // @connect           redislabs.com
@@ -587,15 +595,40 @@ const MASTER_OF_FORUMS = () => {
   });
 
   MAIN.fn.getThreadID = () => {
-    if (typeof tid === 'number') {
+    if (typeof MAIN.data?.thread !== 'number') {
+      MAIN.data.thread = 1;
       // eslint-disable-next-line no-undef
-      return tid;
+      if (typeof tid === 'number' && tid > 0) {
+        // eslint-disable-next-line no-undef
+        MAIN.data.thread = tid;
+      } else {
+        try {
+          if (PATHNAME.includes('/thread-')) {
+            const n = parseInt(PATHNAME.match(/\/thread-(\d+)/)[1], 10);
+            if (typeof n === 'number' && n > 0) {
+              MAIN.data.thread = n;
+            }
+          } else if (HREF.includes('&tid=')) {
+            const n = parseInt(HREF.match(/&tid=(\d+)/)[1], 10);
+            if (typeof n === 'number' && n > 0) {
+              MAIN.data.thread = n;
+            }
+          } else if (HREF.includes('&ptid=')) {
+            const n = parseInt(HREF.match(/&ptid=(\d+)/)[1], 10);
+            if (typeof n === 'number' && n > 0) {
+              MAIN.data.thread = n;
+            }
+          } else if (PATHNAME.includes('/htm_data/')) {
+            const n = parseInt(PATHNAME.match(/\/htm_data\/\d+\/(\d+)/)[1], 10);
+            if (typeof n === 'number' && n > 0) {
+              MAIN.data.thread = n;
+            }
+          }
+        } catch (error) {
+          // pass
+        }
+      }
     }
-    const NUMBER_LIST = HREF.substr(HREF.lastIndexOf('/')).match(/\d+/);
-    if (NUMBER_LIST) {
-      return parseInt(NUMBER_LIST[0], 10);
-    }
-    return false;
   };
 
   MAIN.fn.getNodeCoordinate = (n) => {
@@ -1102,21 +1135,24 @@ const MASTER_OF_FORUMS = () => {
     MAIN.tips?.audio?.play();
   };
 
-  MAIN.actions.postreview = (n) => {
-    GM_setValue(`${HOSTNAME}_actions_postreview_execution_timestamp`, Date.now());
-    const THREAD_ID = MAIN.fn?.getThreadID();
+  MAIN.actions.support = (n) => {
+    MAIN.fn?.getThreadID();
+    GM_setValue(`${HOSTNAME}_actions_support_execution_timestamp`, Date.now());
     const POST_ID = parseInt(n.parentNode.id.match(/\d+/)[0], 10);
     MAIN.data.formhash = document.getElementsByName('formhash')[0].value;
     GM_xmlhttpRequest({
       method: 'GET',
-      url: `../forum.php?mod=misc&action=postreview&do=support&tid=1&pid=${POST_ID}&hash=${MAIN.data?.formhash}&ajaxmenu=1&inajax=1&ajaxtarget=_menu_content`,
+      url: `../forum.php?mod=misc&action=postreview&do=support&tid=${MAIN.data?.thread}&pid=${POST_ID}&hash=${MAIN.data?.formhash}&ajaxmenu=1&inajax=1&ajaxtarget=_menu_content`,
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
       },
       timeout: 4 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
-          MAIN.tips.main.innerHTML = `\u{1F50A} <span style="color: firebrick;">${response.responseText.match(/<root><!\[CDATA\[(.+?)</)[1].trim()}</span>`;
+          const content = response.responseText;
+          MAIN.fn?.print(content);
+          MAIN.fn?.print(content.match(/<root><!\[CDATA\[(.+?)</)[1].trim());
+          MAIN.tips.main.innerHTML = `\u{1F50A} <span style="color: firebrick;">${content.match(/<root><!\[CDATA\[(.+?)</)[1].trim()}</span>`;
           const {
             NODE_X, NODE_Y, NODE_WIDTH, NODE_HEIGHT,
           } = MAIN.fn?.getNodeCoordinate(n);
@@ -1137,7 +1173,7 @@ const MASTER_OF_FORUMS = () => {
           setTimeout(() => {
             MAIN.tips.main.style.display = 'none';
             MAIN.tips.main.style.opacity = '1';
-            GM_deleteValue(`${HOSTNAME}_actions_postreview_execution_timestamp`);
+            GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
           }, 9 * 1000);
 
           const noticeMessage = () => {
@@ -1146,22 +1182,22 @@ const MASTER_OF_FORUMS = () => {
               MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
             }, 3 * 1000);
           };
-          if (response.responseText.includes('postreviewupdate')) {
+          if (content.includes('\u{6295}\u{7968}\u{6210}\u{529F}') || content.includes('>postreviewupdate(')) {
             // 投票成功
             noticeMessage();
-            MAIN.actions.postreview_remote(THREAD_ID, POST_ID, 0);
-          } else if (response.responseText.includes('\u{60A8}\u{4E0D}\u{80FD}\u{5BF9}\u{81EA}\u{5DF1}\u{7684}\u{56DE}\u{5E16}')) {
+            // MAIN.actions?.thumbs(POST_ID);
+          } else if (content.includes('\u{60A8}\u{4E0D}\u{80FD}\u{5BF9}\u{81EA}\u{5DF1}\u{7684}\u{56DE}\u{5E16}')) {
             // 您不能对自己的回帖进行投票
             noticeMessage();
-            MAIN.actions.postreview_remote(THREAD_ID, POST_ID, 1);
-          } else if (response.responseText.includes('\u{60A8}\u{5DF2}\u{7ECF}\u{5BF9}\u{6B64}\u{56DE}\u{5E16}')) {
+            // MAIN.actions?.thumbs(POST_ID);
+          } else if (content.includes('\u{60A8}\u{5DF2}\u{7ECF}\u{5BF9}\u{6B64}\u{56DE}\u{5E16}')) {
             // 您已经对此回帖投过票了
             noticeMessage();
-            MAIN.actions.postreview_remote(THREAD_ID, POST_ID, 2);
-          } else if (response.responseText.includes('\u{672A}\u{5B9A}\u{4E49}\u{64CD}\u{4F5C}')) {
+            // MAIN.actions?.thumbs(POST_ID);
+          } else if (content.includes('\u{672A}\u{5B9A}\u{4E49}\u{64CD}\u{4F5C}')) {
             // 未定义操作
             MAIN.tips.main.innerHTML += '（\u{1F6AB}）';
-          } else if (response.responseText.includes('\u{60A8}\u{9700}\u{8981}\u{5148}\u{767B}\u{5F55}')) {
+          } else if (content.includes('\u{60A8}\u{9700}\u{8981}\u{5148}\u{767B}\u{5F55}')) {
             // 您需要先登录才能继续本操作
             MAIN.tips.main.innerHTML += '（\u{1F636}）';
           }
@@ -1170,9 +1206,92 @@ const MASTER_OF_FORUMS = () => {
     });
   };
 
-  MAIN.actions.postreview_remote = (THREAD_ID, POST_ID, LIKE_STATE = 9) => {
-    MAIN.data.nickname = document.querySelector('.vwmy a')?.innerHTML.trim() || '';
-    MAIN.fn?.print(MAIN.data?.hostname, THREAD_ID, POST_ID, MAIN.data?.nickname, MAIN.data?.formhash, LIKE_STATE);
+  MAIN.actions.supportPointToPoint = (post = []) => {
+    for (let i = 0; i < post.length; i++) {
+      setTimeout(() => {
+        GM_xmlhttpRequest({
+          method: 'GET',
+          url: `../forum.php?mod=misc&action=postreview&do=support&tid=${MAIN.data?.thread}&pid=${post[i]}&hash=${MAIN.data?.formhash}&ajaxmenu=1&inajax=1&ajaxtarget=_menu_content`,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+          timeout: 4 * 1000,
+          onload: (response) => {
+            if (response.readyState === 4 && response.status === 200) {
+              // console.log();
+            }
+          },
+        });
+      }, i * 1234 + 1000);
+    }
+  };
+
+  MAIN.actions.thumbs = (POST_ID) => {
+    MAIN.data.nickname = MAIN.data?.nickname || document.querySelector('.vwmy a')?.innerHTML?.trim() || '';
+    MAIN.fn?.print(MAIN.data?.hostname, POST_ID, MAIN.data?.nickname, MAIN.data?.formhash);
+    GM_xmlhttpRequest({
+      method: 'POST',
+      url: 'https://master-of-forums.ids.workers.dev/actions/thumbs',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      responseType: 'json',
+      data: JSON.stringify({
+        author: GM_info.script?.author,
+        channel: MAIN.channel,
+        handler: GM_info.scriptHandler,
+        homepage: GM_info.script?.homepage,
+        hostname: HOSTNAME,
+        name: GM_info.script?.name,
+        nickname: MAIN.data.nickname,
+        page: HREF,
+        post: POST_ID,
+        thread: MAIN.data?.thread,
+        uuid: GM_info.uuid || GM_info.script?.uuid || '',
+        version: GM_info.script?.version,
+      }),
+      nocache: true,
+      timeout: 9 * 1000,
+      onload: (response) => {
+        MAIN.fn?.print(response);
+        if (response.readyState === 4 && response.status === 200) {
+          const content = response.responseText;
+          MAIN.fn?.print(response.responseHeaders);
+          MAIN.fn?.print(content);
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{1F38A}\u{8BF7}\u{6C42}\u{6210}\u{529F}',
+            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            timeout: 9 * 1000,
+          });
+          MAIN.actions?.supportPointToPoint();
+        } else {
+          GM_notification({
+            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+            text: '\u{274C}\u{8BF7}\u{6C42}\u{5931}\u{8D25}\u{FF01}',
+            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+            timeout: 4 * 1000,
+          });
+        }
+      },
+      onerror: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{8BF7}\u{6C42}\u{9519}\u{8BEF}\u{FF01}',
+          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          timeout: 4 * 1000,
+        });
+      },
+      ontimeout: () => {
+        GM_notification({
+          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
+          text: '\u{274C}\u{8BF7}\u{6C42}\u{8D85}\u{65F6}\u{FF01}',
+          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
+          timeout: 4 * 1000,
+        });
+      },
+    });
   };
 
   document.addEventListener('click', (event) => {
@@ -1191,8 +1310,8 @@ const MASTER_OF_FORUMS = () => {
     const THIS_NODE_TARGET = event.target;
     if (THIS_NODE_TARGET.tagName.toLowerCase() === 'img' && THIS_NODE_TARGET.src.includes('/master-of-forums/master-of-forums/public/images/patch.')) {
       event.preventDefault();
-      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_postreview_execution_timestamp`, 0) > 10 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
-        MAIN.actions.postreview(THIS_NODE_TARGET);
+      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 10 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
+        MAIN.actions?.support(THIS_NODE_TARGET);
       }
     }
   }, false);
@@ -1473,7 +1592,7 @@ const MASTER_OF_FORUMS = () => {
       display: block;
     }
     `);
-    const THREAD_ID = MAIN.fn?.getThreadID();
+    MAIN.fn?.getThreadID();
     document.getElementById('discussion').addEventListener('mouseenter', (event) => {
       if (typeof MAIN.can?.drawerDataCacheTime === 'undefined' || Date.now() - MAIN.can?.drawerDataCacheTime > 30 * 1000) {
         MAIN.can.drawerDataCacheTime = Date.now();
@@ -1481,9 +1600,9 @@ const MASTER_OF_FORUMS = () => {
         event.target.classList.add('loading');
         GM_xmlhttpRequest({
           method: 'GET',
-          url: `//master-of-forums.ids.workers.dev/?uuid=${GM_info.uuid || GM_info.script?.uuid}&hostname=${MAIN.data?.hostname}&data=postlist&sort=posttime`,
+          url: `https://master-of-forums.ids.workers.dev/?uuid=${GM_info.uuid || GM_info.script?.uuid}&hostname=${MAIN.data?.hostname}&data=postlist&sort=posttime`,
           headers: {
-            Referer: GM_info.script?.homepage,
+            'Content-Type': 'application/json; charset=utf-8',
             'X-Requested-With': 'XMLHttpRequest',
           },
           timeout: 9 * 1000,
@@ -1492,7 +1611,7 @@ const MASTER_OF_FORUMS = () => {
               const DATA = JSON.parse(response.responseText);
               let discussionData = '';
               for (const i of DATA.data?.items) {
-                discussionData += `<div class="discussion-list-item${i.discussionId === THREAD_ID ? ' active' : ''}">
+                discussionData += `<div class="discussion-list-item${i.discussionId === MAIN.data?.thread ? ' active' : ''}">
                   <div class="discussion-list-item-author">
                     <a class="discussion-list-item-author-avatar" href="space-uid-${i.userId}.html" target="_blank">
                       <img class="avatar" src="${i.userId === 0 ? '//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/question-mark.svg' : `uc_server/avatar.php?uid=${i.userId}&amp;size=small`}" loading="lazy" referrerpolicy="no-referrer" draggable="false">
@@ -2318,7 +2437,8 @@ const MASTER_OF_FORUMS = () => {
     e.src = '//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/src/js/main.hook.js';
     e.async = true;
     e.dataset.channel = MAIN.channel;
-    e.dataset.version = GM_info.script.version;
+    // e.dataset.handler = GM_info.scriptHandler;
+    e.dataset.version = GM_info.script?.version;
     e.crossOrigin = 'anonymous';
     MAIN.NODE.append(e);
   }, 0);
@@ -2344,6 +2464,9 @@ if (GM_getValue('show_user_badge', true) === false) {
 // User avatar
 if (GM_getValue('show_user_avatar', true) === false) {
   GM_addStyle(`
+  img[src$="&size=big"]  {
+    content: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/default-avatar-big.webp);
+  }
   .pls .avatar img,
   .personinformaion .person-imgs img,
   .do_not_catch table .tac img,
@@ -2351,6 +2474,7 @@ if (GM_getValue('show_user_avatar', true) === false) {
   img[src$="&size=middle"] {
     content: url(//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/default-avatar-middle.webp);
   }
+  #um .avt a img,
   .rate a img,
   .cm .vm a img,
   .post_comm .fl img.post_comm_face,
