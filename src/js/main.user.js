@@ -1177,24 +1177,19 @@ const MASTER_OF_FORUMS = () => {
             GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
           }, 16 * 1000);
 
-          const noticeMessage = () => {
+          const OK = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
-            setTimeout(() => {
-              MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
-            }, 5 * 1000);
+            // MAIN.actions?.thumbs(POST_ID);
           };
           if (content.includes('\u{6295}\u{7968}\u{6210}\u{529F}') || content.includes('>postreviewupdate(')) {
             // 投票成功
-            noticeMessage();
-            // MAIN.actions?.thumbs(POST_ID);
+            OK();
           } else if (content.includes('\u{60A8}\u{4E0D}\u{80FD}\u{5BF9}\u{81EA}\u{5DF1}\u{7684}\u{56DE}\u{5E16}')) {
             // 您不能对自己的回帖进行投票
-            noticeMessage();
-            // MAIN.actions?.thumbs(POST_ID);
+            OK();
           } else if (content.includes('\u{60A8}\u{5DF2}\u{7ECF}\u{5BF9}\u{6B64}\u{56DE}\u{5E16}')) {
             // 您已经对此回帖投过票了
-            noticeMessage();
-            // MAIN.actions?.thumbs(POST_ID);
+            OK();
           } else if (content.includes('\u{672A}\u{5B9A}\u{4E49}\u{64CD}\u{4F5C}')) {
             // 未定义操作
             MAIN.tips.main.innerHTML += '（\u{1F6AB}）';
@@ -1261,42 +1256,28 @@ const MASTER_OF_FORUMS = () => {
       nocache: true,
       timeout: 9 * 1000,
       onload: (response) => {
-        MAIN.fn?.print(response);
         if (response.readyState === 4 && response.status === 200) {
+          setTimeout(() => {
+            MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+          }, 5 * 1000);
           const content = response.responseText;
-          MAIN.fn?.print(response.responseHeaders);
           MAIN.fn?.print(content);
-          GM_notification({
-            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-            text: '\u{1F38A}\u{8BF7}\u{6C42}\u{6210}\u{529F}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
-            timeout: 9 * 1000,
-          });
           MAIN.actions?.supportPointToPoint();
         } else {
-          GM_notification({
-            title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-            text: '\u{274C}\u{8BF7}\u{6C42}\u{5931}\u{8D25}\u{FF01}',
-            image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
-            timeout: 4 * 1000,
-          });
+          setTimeout(() => {
+            MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">云端顶帖</span><span style="color: #060;">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+          }, 5 * 1000);
         }
       },
       onerror: () => {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{274C}\u{8BF7}\u{6C42}\u{9519}\u{8BEF}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
-          timeout: 4 * 1000,
-        });
+        setTimeout(() => {
+          MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">云端顶帖</span><span style="color: #060;">\u{8BF7}\u{6C42}\u{9519}\u{8BEF}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+        }, 5 * 1000);
       },
       ontimeout: () => {
-        GM_notification({
-          title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-          text: '\u{274C}\u{8BF7}\u{6C42}\u{8D85}\u{65F6}\u{FF01}',
-          image: 'https://cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/bull.webp',
-          timeout: 4 * 1000,
-        });
+        setTimeout(() => {
+          MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">云端顶帖</span><span style="color: #060;">\u{8BF7}\u{6C42}\u{8D85}\u{65F6}\u{FF01}</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+        }, 5 * 1000);
       },
     });
   };
