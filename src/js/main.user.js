@@ -158,6 +158,7 @@
 // @connect           feishu.cn
 // @connect           feishu.com
 // @connect           feishu.io
+// @connect           file.io
 // @connect           filecoin.com
 // @connect           filecoin.io
 // @connect           firebase.com
@@ -217,6 +218,7 @@
 // @connect           mongodb.com
 // @connect           mozilla.org
 // @connect           msn.com
+// @connect           mubu.com
 // @connect           myqcloud.com
 // @connect           namesilo.com
 // @connect           netflix.com
@@ -264,6 +266,7 @@
 // @connect           telegram.org
 // @connect           tencent.com
 // @connect           tencentcloudapi.com
+// @connect           tianyancha.com
 // @connect           tokenlon.com
 // @connect           tokenlon.im
 // @connect           tokenlon.io
