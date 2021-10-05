@@ -1167,15 +1167,15 @@ const MASTER_OF_FORUMS = () => {
           }, 1 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.opacity = '0';
-          }, 4 * 1000);
+          }, 5 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
-          }, 13.2 * 1000);
+          }, 15 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.display = 'none';
             MAIN.tips.main.style.opacity = '1';
             GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
-          }, 13.4 * 1000);
+          }, 16 * 1000);
 
           const noticeMessage = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
@@ -1189,8 +1189,8 @@ const MASTER_OF_FORUMS = () => {
             // MAIN.actions?.thumbs(POST_ID);
           } else if (content.includes('\u{60A8}\u{4E0D}\u{80FD}\u{5BF9}\u{81EA}\u{5DF1}\u{7684}\u{56DE}\u{5E16}')) {
             // 您不能对自己的回帖进行投票
-            noticeMessage();
-            // MAIN.actions?.thumbs(POST_ID);
+            // noticeMessage();
+            MAIN.actions?.thumbs(POST_ID);
           } else if (content.includes('\u{60A8}\u{5DF2}\u{7ECF}\u{5BF9}\u{6B64}\u{56DE}\u{5E16}')) {
             // 您已经对此回帖投过票了
             noticeMessage();
@@ -1239,18 +1239,24 @@ const MASTER_OF_FORUMS = () => {
       },
       responseType: 'json',
       data: JSON.stringify({
-        author: GM_info.script?.author,
-        channel: MAIN.channel,
-        handler: GM_info.scriptHandler,
-        homepage: GM_info.script?.homepage,
-        hostname: HOSTNAME,
-        name: GM_info.script?.name,
-        nickname: MAIN.data.nickname,
-        page: HREF,
-        post: POST_ID,
-        thread: MAIN.data?.thread,
-        uuid: GM_info.uuid || GM_info.script?.uuid || '',
-        version: GM_info.script?.version,
+        data: {
+          author: GM_info.script?.author,
+          channel: MAIN.channel,
+          handler: GM_info.scriptHandler,
+          homepage: GM_info.script?.homepage,
+          hostname: HOSTNAME,
+          name: GM_info.script?.name,
+          page: HREF,
+          post: POST_ID,
+          thread: MAIN.data?.thread,
+          uuid: GM_info.uuid || GM_info.script?.uuid || '',
+          version: GM_info.script?.version,
+        },
+        user: {
+          // eslint-disable-next-line camelcase, no-undef
+          id: typeof discuz_uid === 'string' ? discuz_uid : '',
+          nickname: MAIN.data.nickname,
+        },
       }),
       nocache: true,
       timeout: 9 * 1000,
@@ -1311,7 +1317,7 @@ const MASTER_OF_FORUMS = () => {
     const THIS_NODE_TARGET = event.target;
     if (THIS_NODE_TARGET.tagName.toLowerCase() === 'img' && THIS_NODE_TARGET.src.includes('/master-of-forums/master-of-forums/public/images/patch.')) {
       event.preventDefault();
-      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 15 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
+      if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 19 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
         MAIN.actions?.support(THIS_NODE_TARGET);
       }
     }
