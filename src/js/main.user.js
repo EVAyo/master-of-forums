@@ -1189,11 +1189,11 @@ const MASTER_OF_FORUMS = () => {
             // MAIN.actions?.thumbs(POST_ID);
           } else if (content.includes('\u{60A8}\u{4E0D}\u{80FD}\u{5BF9}\u{81EA}\u{5DF1}\u{7684}\u{56DE}\u{5E16}')) {
             // 您不能对自己的回帖进行投票
-            // noticeMessage();
+            noticeMessage();
             // MAIN.actions?.thumbs(POST_ID);
           } else if (content.includes('\u{60A8}\u{5DF2}\u{7ECF}\u{5BF9}\u{6B64}\u{56DE}\u{5E16}')) {
             // 您已经对此回帖投过票了
-            // noticeMessage();
+            noticeMessage();
             // MAIN.actions?.thumbs(POST_ID);
           } else if (content.includes('\u{672A}\u{5B9A}\u{4E49}\u{64CD}\u{4F5C}')) {
             // 未定义操作
