@@ -1163,11 +1163,11 @@ const MASTER_OF_FORUMS = () => {
           MAIN.tips.main.style.top = `${NODE_Y - NODE_HEIGHT / 4}px`;
           MAIN.tips.main.style.display = 'inline-block';
           setTimeout(() => {
-            MAIN.tips.main.style.transition = 'opacity 9s ease-in';
+            MAIN.tips.main.style.transition = 'opacity 7s ease-in';
           }, 1 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.opacity = '0';
-          }, 5 * 1000);
+          }, 7 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
           }, 14.5 * 1000);
