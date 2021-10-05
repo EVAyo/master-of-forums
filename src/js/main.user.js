@@ -1170,12 +1170,12 @@ const MASTER_OF_FORUMS = () => {
           }, 5 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
-          }, 15 * 1000);
+          }, 14.5 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.display = 'none';
             MAIN.tips.main.style.opacity = '1';
             GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
-          }, 16 * 1000);
+          }, 15 * 1000);
 
           const OK = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
