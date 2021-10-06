@@ -589,6 +589,7 @@ img.master-badge:hover,
   position: absolute;
   z-index: 9999;
   content: attr(data-date);
+  background-color: var(--main-light);
 }
 
 .discussion-list-item-content .content-title a {
