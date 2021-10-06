@@ -1257,11 +1257,10 @@ const MASTER_OF_FORUMS = () => {
       timeout: 9 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
+          const content = JSON.parse(response.responseText);
           setTimeout(() => {
-            MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">成功申请</span><span style="color: #060;">云端顶帖</span>\u{1F389}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
+            MAIN.tips.main.innerHTML = content.message;
           }, 5 * 1000);
-          const content = response.responseText;
-          MAIN.fn?.print(content);
           MAIN.actions?.supportPointToPoint();
         } else {
           setTimeout(() => {
