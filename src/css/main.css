@@ -668,3 +668,42 @@ img.master-badge:hover,
   -webkit-animation: drawer-guide-move 0.5s 4;
   animation: drawer-guide-move 0.5s 4;
 }
+
+/* Char Half */
+.char-half {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+
+.char-half::before {
+  position: absolute;
+  width: 50%;
+  overflow: hidden;
+  content: attr(data-content);
+}
+
+.char-half::after {
+  position: absolute;
+  left: 50%;
+  direction: rtl;
+  width: 50%;
+  overflow: hidden;
+  content: attr(data-content);
+}
+
+.char-half.char-micro::before {
+  color: #f25022;
+}
+
+.char-half.char-micro::after {
+  color: #7fba00;
+}
+
+.char-half.char-soft::before {
+  color: #00a4ef;
+}
+
+.char-half.char-soft::after {
+  color: #ffb900;
+}
