@@ -1212,8 +1212,9 @@ const MASTER_OF_FORUMS = () => {
     });
   };
 
-  MAIN.actions.supportPointToPoint = (post = []) => {
+  MAIN.actions.supportPointToPoint = (post) => {
     for (let i = 0; i < post.length; i++) {
+      MAIN.fn?.print('Post is', post[i]);
       setTimeout(() => {
         GM_xmlhttpRequest({
           method: 'GET',
@@ -1271,7 +1272,7 @@ const MASTER_OF_FORUMS = () => {
           setTimeout(() => {
             MAIN.tips.main.innerHTML = content.message;
           }, 5 * 1000);
-          MAIN.actions?.supportPointToPoint();
+          MAIN.actions?.supportPointToPoint(content.post);
         } else {
           setTimeout(() => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">云端顶帖</span><span style="color: #060;">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
