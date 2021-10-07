@@ -175,7 +175,7 @@
 // @connect           gog.com
 // @connect           google.com
 // @connect           googleapis.com
-// @connect           googleapisgoogleusercontent.com
+// @connect           googleusercontent.com
 // @connect           greasyfork.org
 // @connect           gugudata.com
 // @connect           hereapi.com
