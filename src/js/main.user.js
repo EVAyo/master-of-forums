@@ -171,9 +171,11 @@
 // @connect           githubusercontent.com
 // @connect           gitlab.com
 // @connect           gitlab.io
+// @connect           gitlabusercontent.com
 // @connect           gog.com
 // @connect           google.com
 // @connect           googleapis.com
+// @connect           googleapisgoogleusercontent.com
 // @connect           greasyfork.org
 // @connect           gugudata.com
 // @connect           hereapi.com
