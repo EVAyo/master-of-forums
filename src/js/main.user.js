@@ -114,6 +114,7 @@
 // @connect           aliyuncs.com
 // @connect           amap.com
 // @connect           amazon.com
+// @connect           android.com
 // @connect           api.imgur.com
 // @connect           api.video
 // @connect           apiopen.top
@@ -129,6 +130,8 @@
 // @connect           bing.com
 // @connect           bitpay.com
 // @connect           blockchain.com
+// @connect           blogger.com
+// @connect           blogspot.comg
 // @connect           buymeacoffee.com
 // @connect           caniuse.com
 // @connect           cdnjs.com
@@ -142,6 +145,7 @@
 // @connect           coinmarketcap.com
 // @connect           curve.com
 // @connect           curve.fi
+// @connect           debug.com
 // @connect           dianping.com
 // @connect           digitalocean.com
 // @connect           dingtalk.com
@@ -163,6 +167,7 @@
 // @connect           filecoin.io
 // @connect           firebase.com
 // @connect           firebaseio.com
+// @connect           fitbit.com
 // @connect           flickr.com
 // @connect           gitbook.com
 // @connect           gitbook.io
@@ -172,12 +177,14 @@
 // @connect           gitlab.com
 // @connect           gitlab.io
 // @connect           gitlabusercontent.com
+// @connect           gmail.com
 // @connect           gog.com
 // @connect           google.com
 // @connect           googleapis.com
 // @connect           googleusercontent.com
 // @connect           greasyfork.org
 // @connect           gugudata.com
+// @connect           gv.com
 // @connect           hereapi.com
 // @connect           httpbin.org
 // @connect           hualigs.cn
@@ -201,6 +208,7 @@
 // @connect           kaiyanapp.com
 // @connect           kuaidi.com
 // @connect           ledger.com
+// @connect           like.com
 // @connect           lunarcrush.com
 // @connect           mail.com
 // @connect           maoyan.com
