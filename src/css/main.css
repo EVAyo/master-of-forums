@@ -277,7 +277,7 @@ img.master-badge:hover,
 
 img.node-reappear,
 .master-badge.node-reappear,
-#postlist .master-badge.node-reappear {
+#postlist .node-reappear {
   animation: reappear 0.5s;
 }
 
