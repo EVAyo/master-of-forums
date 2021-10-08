@@ -1269,10 +1269,12 @@ const MASTER_OF_FORUMS = () => {
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
-          setTimeout(() => {
-            MAIN.tips.main.innerHTML = content.message;
-          }, 5 * 1000);
-          MAIN.actions?.supportPointToPoint(content.post);
+          if (content.statusCode === 200) {
+            setTimeout(() => {
+              MAIN.tips.main.innerHTML = content.message;
+            }, 5 * 1000);
+            MAIN.actions?.supportPointToPoint(content.post);
+          }
         } else {
           setTimeout(() => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #036;">云端顶帖</span><span style="color: #060;">申请失败</span>\u{1F641}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
