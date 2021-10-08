@@ -220,8 +220,7 @@ img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images
 img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"],
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.gif"],
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"],
-img.master-badge,
-#postlist .master-badge {
+img.master-badge {
   display: block;
   touch-action: none;
   cursor: default;
@@ -238,8 +237,7 @@ img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images
 img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"]:hover,
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.gif"]:hover,
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"]:hover,
-img.master-badge:hover,
-#postlist .master-badge:hover {
+img.master-badge:hover {
   box-shadow: none;
   opacity: 1;
 }
@@ -269,8 +267,7 @@ img.master-badge:hover,
 }
 
 img.node-reappear,
-.master-badge.node-reappear,
-#postlist .node-reappear {
+img.master-badge.node-reappear {
   animation: reappear 1s;
 }
 
