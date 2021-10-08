@@ -216,12 +216,6 @@ img[file]:hover {
   box-shadow: unset;
 }
 
-/* Master Badge */
-@keyframes mb {
-  from { opacity: 0; }
-  to { opacity: 0.5; }
-}
-
 img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.gif"],
 img[file$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"],
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.gif"],
@@ -237,7 +231,6 @@ img.master-badge,
   box-shadow: none;
   opacity: 0.5;
   transition: opacity 1s;
-  animation: mb 1s;
   -webkit-user-drag: none;
 }
 
