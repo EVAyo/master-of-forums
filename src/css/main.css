@@ -275,9 +275,8 @@ img.master-badge:hover,
   }
 }
 
-img.node-reappear,
-.wp .node-reappear,
-#postlist .node-reappear, {
+img.master-badge.node-reappear,
+#postlist .master-badge.node-reappear, {
   animation: reappear 0.5s;
 }
 
