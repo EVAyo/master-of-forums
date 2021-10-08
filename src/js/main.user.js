@@ -1238,7 +1238,6 @@ const MASTER_OF_FORUMS = () => {
 
   MAIN.actions.thumbs = (POST_ID) => {
     MAIN.data.nickname = MAIN.data?.nickname || document.querySelector('.vwmy a')?.innerHTML?.trim() || '';
-    MAIN.fn?.print(MAIN.data?.hostname, POST_ID, MAIN.data?.nickname, MAIN.data?.formhash);
     GM_xmlhttpRequest({
       method: 'POST',
       url: 'https://master-of-forums.ids.workers.dev/actions/thumbs',
