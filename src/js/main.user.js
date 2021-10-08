@@ -1173,19 +1173,19 @@ const MASTER_OF_FORUMS = () => {
           MAIN.tips.main.style.top = `${NODE_Y - NODE_HEIGHT / 4}px`;
           MAIN.tips.main.style.display = 'inline-block';
           setTimeout(() => {
-            MAIN.tips.main.style.transition = 'opacity 7s ease-in';
+            MAIN.tips.main.style.transition = 'opacity 9s ease-in';
           }, 1 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.opacity = '0';
           }, 7 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'none';
-          }, 14.5 * 1000);
+          }, 16.5 * 1000);
           setTimeout(() => {
             MAIN.tips.main.style.display = 'none';
             MAIN.tips.main.style.opacity = '1';
             GM_deleteValue(`${HOSTNAME}_actions_support_execution_timestamp`);
-          }, 15 * 1000);
+          }, 17 * 1000);
 
           const OK = () => {
             MAIN.tips.main.innerHTML = '\u{1F50A} <span style="color: #c60;">正在请求云端支持</span>\u{2728}（<span style="color: var(--main-gray);">论坛大师云端点赞</span>）';
@@ -1272,7 +1272,7 @@ const MASTER_OF_FORUMS = () => {
           if (content.statusCode === 200) {
             setTimeout(() => {
               MAIN.tips.main.innerHTML = content.message;
-            }, 5 * 1000);
+            }, content.delay);
             MAIN.actions?.supportPointToPoint(content.post);
           }
         } else {
@@ -1311,6 +1311,10 @@ const MASTER_OF_FORUMS = () => {
     if (THIS_NODE_TARGET.tagName.toLowerCase() === 'img' && THIS_NODE_TARGET.src.includes('/master-of-forums/master-of-forums/public/images/patch.')) {
       event.preventDefault();
       if (Date.now() - GM_getValue(`${HOSTNAME}_actions_support_execution_timestamp`, 0) > 19 * 1000 && ['91ai.net'].includes(HOSTNAME)) {
+        THIS_NODE_TARGET.classList.add('node-reappear');
+        setTimeout(() => {
+          THIS_NODE_TARGET.classList.remove('node-reappear');
+        }, 1000);
         MAIN.actions?.support(THIS_NODE_TARGET);
       }
     }

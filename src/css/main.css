@@ -236,7 +236,7 @@ img.master-badge,
   border: none;
   box-shadow: none;
   opacity: 0.5;
-  transition: all 1s;
+  transition: opacity 1s;
   -webkit-animation: mb 1s;
   animation: mb 1s;
   -webkit-user-drag: none;
@@ -248,9 +248,36 @@ img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/
 img[src$="//cdn.jsdelivr.net/gh/master-of-forums/master-of-forums/public/images/patch.svg"]:hover,
 img.master-badge:hover,
 #postlist .master-badge:hover {
-  filter: drop-shadow(0 0 2px #fff);
   box-shadow: none;
   opacity: 1;
+}
+
+/* Reappear  */
+@keyframes reappear {
+  from {
+    opacity: 1;
+  }
+
+  49% {
+    transform: scale3d(2, 2, 2);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  51% {
+    transform: scale3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.node-reappear {
+  animation: reappear 0.5s;
 }
 
 /* Notice */
