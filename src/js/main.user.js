@@ -1167,10 +1167,12 @@ const MASTER_OF_FORUMS = () => {
           const {
             NODE_X, NODE_Y, NODE_WIDTH, NODE_HEIGHT,
           } = MAIN.fn?.getNodeCoordinate(n);
-          MAIN.tips.main.style.height = `${NODE_HEIGHT * 1.5}px`;
-          MAIN.tips.main.style.lineHeight = `${NODE_HEIGHT * 1.5}px`;
-          MAIN.tips.main.style.left = `${NODE_X + NODE_WIDTH + 8}px`;
-          MAIN.tips.main.style.top = `${NODE_Y - NODE_HEIGHT / 4}px`;
+          const NODE_CENTER_X = NODE_X + NODE_WIDTH / 2;
+          const NODE_CENTER_Y = NODE_Y + NODE_HEIGHT / 2;
+          MAIN.tips.main.style.height = '24px';
+          MAIN.tips.main.style.lineHeight = '24px';
+          MAIN.tips.main.style.left = `${NODE_CENTER_X + 55 + 8}px`;
+          MAIN.tips.main.style.top = `${NODE_CENTER_Y - 12}px`;
           MAIN.tips.main.style.display = 'inline-block';
           setTimeout(() => {
             MAIN.tips.main.style.transition = 'opacity 9s ease-in';
