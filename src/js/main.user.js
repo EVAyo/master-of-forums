@@ -2498,11 +2498,6 @@ if (GM_getValue('show_user_avatar', true) === false) {
   #content img.ProfilePhoto.ProfilePhotoMedium {
     content: url(//ui-avatars.com/api/?size=40&name);
   }
-  .content .box .header a img.avatar,
-  .content .box .cell table img.avatar,
-  .content .box .fl img {
-    content: url(//ui-avatars.com/api/?size=96&name);
-  }
   `);
 }
 
